@@ -13,7 +13,8 @@
 <body>
   <header>
     <div class="menulogo">
-      <img src="/images/logo.svg" alt="SNEAKERS" class="logo">
+      <img src="./images/icon-menu.svg" alt="" class="hamburger" id="hamburger">
+      <img src="./images/logo.svg" alt="SNEAKERS" class="logo">
       <nav>
         <a href="#">Collections</a>
         <a href="#">Men</a>
@@ -23,19 +24,22 @@
       </nav>
     </div>
     <div class="navatar">
-      <a href="#"><img src="/images/icon-cart.svg" alt="cart"></a>
-      <a href="#"><img src="/images/image-avatar.png" alt="avatar" class="avatar"></a>
+      <a href="#"><img src="./images/icon-cart.svg" alt="cart"></a>
+      <a href="#"><img src="./images/image-avatar.png" alt="avatar" class="avatar"></a>
     </div>
   </header>
   <main>
     <div class="gallery">
-      <img src="/images/image-product-1.jpg" alt="buty" class="photo">
+      <button id="backButton" class="arrowButton backButton"><img src="./images/icon-previous.svg" alt="previous image"></button>
+      <button id="nextButton"class="arrowButton nextButton"><img src="./images/icon-next.svg" alt="next image"></button>
+
+      <img src="./images/image-product-1.jpg" alt="buty" class="photo">
 
       <div class="thumbnails">
-        <img src="/images/image-product-1-thumbnail.jpg" alt="buty" class="thumbnail">
-        <img src="/images/image-product-2-thumbnail.jpg" alt="buty" class="thumbnail">
-        <img src="/images/image-product-3-thumbnail.jpg" alt="buty" class="thumbnail">
-        <img src="/images/image-product-4-thumbnail.jpg" alt="buty" class="thumbnail">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="buty" class="thumbnail">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="buty" class="thumbnail">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="buty" class="thumbnail">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="buty" class="thumbnail">
       </div>
     </div>
     <div class="right">
@@ -50,15 +54,17 @@
         durable rubber outer sole, they'll withstand everything the weather can offer.
       </p>
       <div class="price">
-        <h2>$125.00</h2>
-        <h3 class="percent">50%</h3>
+        <div class="pricePercent">
+          <h2>$125.00</h2>
+          <h3 class="percent">50%</h3>
+        </div>
+        <s class="discount">$250.00</s>
       </div>
-      <s class="discount">$250.00</s>
       <div class="cartnav">
         <div class="amount">
-          <button><img src="/images/icon-minus.svg" alt="-"></button>0<button><img src="/images/icon-plus.svg" alt="+"></button>
+          <button><img src="./images/icon-minus.svg" alt="-"></button>0<button><img src="./images/icon-plus.svg" alt="+"></button>
         </div>
-        <button><img src="/images/icon-cart.svg" alt="cart"> Add to cart</button>
+        <button><img src="./images/icon-cart.svg" alt="cart"> Add to cart</button>
       </div>
     </div>
   </main>
