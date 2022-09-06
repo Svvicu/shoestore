@@ -1,77 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-*{
+
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
     font-family: Kumbh Sans;
 }
-header{
+
+header {
     margin: 3% 10% 0% 10%;
-    display: flex;  
+    display: flex;
     gap: 10%;
     justify-content: space-between;
     border-bottom: 1px solid rgb(206, 206, 206);
     padding-bottom: 40px;
 }
-.menulogo{
+
+.hamburger {
+    display: none;
+}
+
+.menulogo {
     display: flex;
     width: 80%;
     align-items: center;
 }
-.logo{
+
+.logo {
     margin: 0% 3% 0% 0%;
 }
-nav{
+
+nav {
     justify-items: left;
     width: 100%;
 }
-nav > a{
+
+nav>a {
     border: none;
     text-decoration: none;
     color: hsl(219, 9%, 45%);
 }
-.navatar{
+
+.navatar {
     justify-self: right;
     display: flex;
     flex-direction: row;
 }
-.avatar{
+
+.avatar {
     width: 40px;
-    margin: 0 0 0 1vh;
-    
+    margin: 0 0 0 1.5vh;
+
 }
-.navatar a{
+
+.navatar a {
     margin: auto;
 }
-main{
+
+aside {
+    display: none;
+}
+
+main {
     display: flex;
     justify-content: center;
     gap: 10%;
     width: 80%;
     padding-bottom: 10%;
 }
-.gallery{
+
+.gallery {
     display: flex;
     flex-wrap: wrap;
     width: 30%;
     gap: 25px;
     margin: 5% 0% 0% 10%;
 }
-.photo{
+
+.photo {
     width: 100%;
     border-radius: 30px;
 }
-.thumbnails{
+
+.thumbnails {
     display: flex;
     width: 100%;
 }
-.thumbnail{
+
+.thumbnail {
     border-radius: 15px;
     height: fit-content;
     padding: 5px;
     width: 25%;
 }
-.right{
+
+.right {
     width: 40%;
     display: flex;
     justify-content: center;
@@ -79,17 +102,20 @@ main{
     padding: 5%;
     gap: 15px;
 }
-.company{
+
+.company {
     color: hsl(26, 100%, 55%);
 }
-.name{
+
+.name {
     color: hsl(220, 13%, 13%);
 }
-.description{
+
+.description {
     color: hsl(219, 9%, 45%);
 }
 
-.price{
+.price {
     display: flex;
     gap: 15px;
     align-items: center;
@@ -97,17 +123,19 @@ main{
     width: 100%;
     justify-content: space-between;
 }
-.pricePercent{
+
+.pricePercent {
     display: flex;
-    
-    
+
+
 }
-.percent{
+
+.percent {
     background-color: hsl(25, 100%, 94%);
     color: hsl(26, 100%, 55%);
     padding: 0 1em;
     font-size: 12px;
-    
+
     font-weight: 900;
     border-radius: 5px;
     margin-left: 2em;
@@ -115,14 +143,17 @@ main{
     justify-content: center;
     align-items: center;
 }
-.discount{
+
+.discount {
     color: hsl(220, 14%, 75%);
 }
-.cartnav{
+
+.cartnav {
     display: flex;
     gap: 20%;
 }
-.cartnav > button{
+
+.cartnav>button {
     display: flex;
     border: none;
     background-color: hsl(26, 100%, 55%);
@@ -131,12 +162,18 @@ main{
     border-radius: 1em;
     align-items: center;
     justify-content: center;
-    
+
 }
-.cartnav > button > img{
-    margin-right: 0.75em;
+
+.cart {
+    width: 4.5vh;
 }
-.amount{
+
+.avatar {
+    width: 4.5vh;
+}
+
+.amount {
     display: flex;
     padding: 5px;
     width: 200px;
@@ -145,49 +182,118 @@ main{
     background-color: hsl(223, 64%, 98%);
     border-radius: 0.75em;
 }
-.amount >button{
+
+.amount>button {
     border: none;
     padding: 10px;
     background-color: hsl(223, 64%, 98%);
 
 }
-.arrowButton{
+
+.arrowButton {
     display: none;
 }
 
-@media(max-width: 768px){
-    main{
+@media(max-width: 768px) {
+    main {
         flex-direction: column;
         margin: 0%;
         width: 100%;
     }
-    header{
-        border: 0;
-        padding-bottom: 1em;
-        position: fixed;
-    }
-    .gallery{
-        width: 100%;
+
+    header {
         margin: 0%;
+        position: fixed;
+        z-index: 1000;
+        background-color: #fff;
+        width: 100%;
+        border: 0ch;
+        padding: 1em 0.5em;
+    }
+
+    .gallery {
+        width: 100%;
+        margin: 5em 0 0 0;
         position: relative;
     }
-    .right{
+
+    .right {
         width: 100%;
     }
-    .photo{
+
+    .photo {
         width: 100%;
         border-radius: 0%;
-    }   
-    nav{
+    }
+
+    .hamburger:hover {
+        cursor: pointer;
+    }
+
+    nav {
         display: none;
     }
-    .thumbnails{
+
+    .sidemenu {
+        display: flex;
+    }
+
+    aside {
+        position: fixed;
+        background-color: #fff;
+        flex-direction: column;
+        z-index: 9002;
+        height: 100%;
+        width: 75%;
+        overflow: auto;
+    }
+
+    aside img {
+        width: 2vh;
+        margin: 2em 0 3em 1.5em;
+        cursor: pointer;
+    }
+
+    aside>a {
+        text-decoration: none;
+        color: hsl(220, 13%, 13%);
+        font-weight: 900;
+        margin: 0 4em 1.5em 1.5em;
+    }
+
+    .asideBackground {
+        display: none;
+        position: fixed;
+        background-color: hsla(0, 0%, 0%, 0.75);
+        z-index: 9002;
+        height: 100%;
+        width: 25%;
+        right: 0;
+    }
+
+    .navatar {
+        padding-top: 0.25em;
+        background-color: #fff;
+    }
+
+    .avatar {
+        width: 3vh;
+    }
+
+    .cart {
+        width: 3vh;
+    }
+
+    .thumbnails {
         display: none;
     }
-    .hamburger{
-        margin-right: 0.75em;
+
+    .hamburger {
+        display: block;
+        margin: 0 0.75em;
     }
-    .arrowButton{
+
+    .arrowButton {
         position: absolute;
         border-radius: 50%;
         background-color: #fff;
@@ -200,37 +306,71 @@ main{
         border: none;
         cursor: pointer;
     }
+
     .arrowButton img {
         width: 1vh;
     }
-    .backButton{
+
+    .backButton {
         top: 50%;
         left: 10%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
 
     }
-    .nextButton{
+
+    .nextButton {
         top: 50%;
         left: 90%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
     }
-    .cartnav{
+
+    .cartnav {
         flex-direction: column;
         align-items: center;
-        
+
     }
-    .cartnav button{
+
+    .cartnav button {
         padding: 0.75em;
         width: 90%;
     }
-    .amount{
+
+    .amount {
         width: 90%;
         padding: 0.5em;
         margin-bottom: 0.75em;
     }
-    .amount button{
+
+    .amount button {
         width: 20%;
+    }
+
+    .amount input {
+        border: none;
+        text-align: center;
+        background: none;
+        font-weight: 900;
+        color: hsl(220, 13%, 13%);
+        appearance: none;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        outline: none;
+
+    }
+    
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    .show {
+        display: flex;
     }
 }

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
   <header>
     <div class="menulogo">
       <img src="./images/icon-menu.svg" alt="" class="hamburger" id="hamburger">
@@ -24,14 +25,25 @@
       </nav>
     </div>
     <div class="navatar">
-      <a href="#"><img src="./images/icon-cart.svg" alt="cart"></a>
+      <a href="#"><img src="./images/icon-cart.svg" alt="cart" class="cart"></a>
       <a href="#"><img src="./images/image-avatar.png" alt="avatar" class="avatar"></a>
     </div>
   </header>
+  <aside id="aside">
+    <img src="./images/icon-close.svg" alt="close" id="close">
+    <a href="#">Collections</a>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </aside>
+  <div id="asideBackground" class="asideBackground"></div>
   <main>
     <div class="gallery">
-      <button id="backButton" class="arrowButton backButton"><img src="./images/icon-previous.svg" alt="previous image"></button>
-      <button id="nextButton"class="arrowButton nextButton"><img src="./images/icon-next.svg" alt="next image"></button>
+      <button id="backButton" class="arrowButton backButton"><img src="./images/icon-previous.svg"
+          alt="previous image"></button>
+      <button id="nextButton" class="arrowButton nextButton"><img src="./images/icon-next.svg"
+          alt="next image"></button>
 
       <img src="./images/image-product-1.jpg" alt="buty" class="photo">
 
@@ -49,7 +61,7 @@
       <h1 class="name">
         Fall Limited Edition Sneakers
       </h1>
-      <p class="description">
+      <p class="description" id="description">
         These low-profile sneakers are your perfect casual wear companion. Featuring a
         durable rubber outer sole, they'll withstand everything the weather can offer.
       </p>
@@ -62,12 +74,14 @@
       </div>
       <div class="cartnav">
         <div class="amount">
-          <button><img src="./images/icon-minus.svg" alt="-"></button>0<button><img src="./images/icon-plus.svg" alt="+"></button>
+          <button id="amountMinus"><img src="./images/icon-minus.svg" alt="-" ></button><input type="number"id="amountCounter" min="0" value="0"><button id="amountPlus"><img src="./images/icon-plus.svg"
+              alt="+"></button>
         </div>
         <button><img src="./images/icon-cart.svg" alt="cart"> Add to cart</button>
       </div>
     </div>
   </main>
 </body>
+<script src="./script.js"></script>
 
 </html>
